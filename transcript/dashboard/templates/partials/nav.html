@@ -1,0 +1,92 @@
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-+1wNp32NwuMTl3EEivHxvD/b/akziQjqoL8CfW1uhRy7VUf1hUJ7cH+QGZahjrLAcgJzl9XrVrjbyTDaMml+rw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+    .custom-form {
+    background: linear-gradient(to left, #00b09b, #96c93d, #FFFFFF);
+    padding: 4px;
+}
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-container input {
+  padding-right: 30px;
+}
+
+.search-container button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 35px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+
+    .nav-link {
+        margin-right: 20px; /* increase the margin value to add more distance between the menu items */
+    }
+</style>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark custom-form" >
+    <div class = "container">
+   <a class="navbar-brand" href="{% url 'home' %}">
+    <img src="static/dashboard/images/harmony.png" style="width: 240px; height: auto;" alt="">
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" custom-form>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" custom-form>
+        <a class="nav-link" href="#">DATA</a>
+      </li>
+      <li class="nav-item dropdown" custom-form>
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" custom-form>
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item" custom-form>
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+
+
+
+    <form class="form-inline my-2 my-lg-0" custom-form>
+
+<div class="search-container">
+  <input class="form-control" name=q type="search" placeholder="Search" aria-label="Search">
+  <button class="btn" type="submit">
+    <i class="fa fa-search" style="color: #96c93d;"></i>
+  </button>
+</div>
+
+
+
+  <a href="{% url 'logout' %}" class="btn btn-outline-success ml-3"><i class="fa fa-sign-out"></i></a>
+
+</form>
+</div>
+</div>
+</nav>
+
