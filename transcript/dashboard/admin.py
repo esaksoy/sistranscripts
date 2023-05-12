@@ -2,12 +2,25 @@ from django.contrib import admin
 from . models import *
 from import_export.admin import ImportExportModelAdmin
 
+from django.contrib import admin
 
 
-class DataAdmin(ImportExportModelAdmin):
-    list_display = ["studentid", "fistname","surname","dateofbirth" ]
+class StudentAdmin(ImportExportModelAdmin):
+    list_display = ["studentid", "firstname","lastname","dateofbirth" ]
     search_fields = ["studentid"]
     list_per_page = 9
     pass
 
-admin.site.register(Data, DataAdmin)
+
+class ClassAdmin(admin.ModelAdmin):
+    list_display = ["classid", "classname", "classyear"]
+    pass
+
+
+admin.site.register(Student, StudentAdmin)
+admin.site.register(Class, ClassAdmin)
+
+
+
+
+
